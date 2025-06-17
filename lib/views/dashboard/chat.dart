@@ -66,6 +66,7 @@ class _ChatState extends State<Chat> {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(backgroundColor: Colors.red[400], content: Text('Error: $e')),
       );
+      EasyLoading.dismiss();
     }
   }
 

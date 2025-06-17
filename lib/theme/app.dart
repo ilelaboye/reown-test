@@ -25,10 +25,10 @@ class AppTheme {
   static ThemeData darkTheme = ThemeData.dark().copyWith(
     primaryColor: Color(0xFF2C57A6),
     textTheme: GoogleFonts.interTextTheme().copyWith(
-        bodyLarge: TextStyle(fontSize: 18, color: Colors.white),
+        bodyLarge: TextStyle(fontSize: 18, color: Colors.black),
         titleLarge: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
         labelSmall: TextStyle(
-            fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white)),
+            fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black)),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         foregroundColor: Colors.white,

@@ -101,21 +101,26 @@ class ApiService {
       );
       if (response.statusCode == 200 || response.statusCode == 201) {
         final data = jsonDecode(response.body);
-        for (var entry in data.entries) {
-          if ((entry.value['senderId'] == senderId &&
-                  entry.value['receiverId'] == receiverId) ||
-              (entry.value['senderId'] == receiverId &&
-                  entry.value['receiverId'] == senderId)) {
-            var chat = {
-              'id': entry.key,
-              'senderId': entry.value['senderId'],
-              'receiverId': entry.value['receiverId'],
-              'message': entry.value['message'],
-            };
-            chats.add(chat);
+        print(data);
+        if (data != null) {
+          for (var entry in data.entries) {
+            if ((entry.value['senderId'] == senderId &&
+                    entry.value['receiverId'] == receiverId) ||
+                (entry.value['senderId'] == receiverId &&
+                    entry.value['receiverId'] == senderId)) {
+              var chat = {
+                'id': entry.key,
+                'senderId': entry.value['senderId'],
+                'receiverId': entry.value['receiverId'],
+                'message': entry.value['message'],
+              };
+              chats.add(chat);
+            }
           }
+          return chats;
+        } else {
+          return [];
         }
-        return chats;
       } else {
         var error = jsonDecode(response.body);
         throw error['error'];
