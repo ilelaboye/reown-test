@@ -70,7 +70,7 @@ class _ChatState extends State<Chat> {
   }
 
   void _startPeriodicTask() {
-    _timer = Timer.periodic(Duration(seconds: 30), (timer) {
+    _timer = Timer.periodic(Duration(seconds: 5), (timer) {
       getChats();
     });
   }

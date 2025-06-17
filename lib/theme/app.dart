@@ -29,5 +29,15 @@ class AppTheme {
         titleLarge: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
         labelSmall: TextStyle(
             fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white)),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        foregroundColor: Colors.white,
+        backgroundColor: const Color(0xFF2C57A6),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(3),
+        ),
+      ),
+    ),
   );
 }

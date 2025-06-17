@@ -51,6 +51,7 @@ class _LoginState extends State<Login> {
         child: Form(
           key: _form,
           child: Container(
+            color: Colors.white,
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
